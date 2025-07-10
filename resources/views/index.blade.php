@@ -9,7 +9,7 @@
   <body>
     <div class="container">
         <h1 class="mb-5">CRUD SEDERHANA SISWA</h1>
-        <a class="btn btn-primary">Create Siswa</a>
+        <a href="/create" class="btn btn-primary">Create Siswa</a>
         <div>
             <table class="table table-striped">
                 <thead>

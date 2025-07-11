@@ -10,7 +10,8 @@ class SiswaController extends Controller
 {
     //index view
     public function index() {
-        return view('index');
+        $users = User::all();
+        return view('index', compact('users'));
     }
 
 
@@ -47,6 +48,6 @@ class SiswaController extends Controller
         $data_store['photo'] = $request->file('photo')->store('photosiswa', 'public');
 
         User::create($data_store);
-        return view('index');
+        return redirect('/');
     }
 }

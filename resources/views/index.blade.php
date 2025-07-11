@@ -23,20 +23,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td><img width="50" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQIEBQYDB//EADUQAAICAAMFBAgFBQAAAAAAAAABAgMEESEFEjFBUSJhcsETIzNCcYGhsWKRktHwFCQyUoL/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIRAxEAPwD9cABUAAAAAAAAAAAAAAAACMrMWBGMwRgAQAfUAAAAAAAFI2opuTSS5t5GpjsbHDZwjlO3pyXxOPffZfLesk33cl8gO3PH4WHG1Pw6mK2lhX70l8Ys4QA9HVfVdpXZGT6Z6/kfQ8x5G9hdpWVNRvbsh195fuB2Q2YwnGyCnCSlF8GgwBARgGyMMjAEIANgAAAAANfHYn+mocl/nLSJsnC2nb6XFyj7sOyvMDVbbbbbbfFsgBQAAAAMDb2dinRZuTfqpvXufU7TPMceJ3cBb6bCQk3nJdl/Ig2CZ8i5mIBkYZiAbQMfmANsAAAABVxR5mxuVk5PnJs9Meati4Wzi+UmvqIMAAUAAAI2GyADqbGl6q2P4kco6uxl6myXWWX8/MUb+ZGGyNkEbMWGYtgXMGOYA3gAAAAA421qXXid9Ls2a59/M7J8sVQsTS65ac4vowPOgysrnVN12RykuJiUCNgjAEBGAO9hKnRh4VvitZfE0Nm4Vykr7E1BPsp+8/2Oo2QGYsNmLYBmLYbIwGZDEoHRAAAAAAUwsshVDeskox6sD54rC14qKU+zJcJLijjYjBX0Nvd34/7RN2/a0Fmqa3LvloiU7Vg/bQcH1jqgOS2R6cdDvO/BXaynVLx8fqYtYGGv9uv0gcWuudssq4Sl8EdDC7NyaniH/wALzPvZtDC1x3Yy3u6C0NV7Wlv+yW503tQOm9NFw6dDFmvTjqLskpuMuUZH3YBsxb1DMWAZi3qGzFsCNgma6gDqgAACnwxeIWGolY+PCK6sD547GRwsckt6x8I58O9nFutndPfsk5S5N8vgYznKc3ObzlJ5tmJQZAQATToGRgCMNmIB6o3MJj51NQtbnD6xNNsxfeB6JSUoqUXmnqmRs5OzsS4TVM32J8O5nUbIJmYNlzMWwAJmAOwAAKcTa13pMT6NPsw0y7ztNpavgtTzNkvSTlN8ZNsDFkYIUCAARjMjI2AZA2YtgGYspiAfcdvDXemw8J8+Evijhs39lT7NkHyaa/nyIOgyNkIwGYGYA7IBGBhe/UW+CX2PNJ6I9Jd7C3wS+x5oAwCMoEDMWAzICNgDFhsgBvIxbDIwI2bmyX66xfg8zSz6m5sr29ng8wOmyMMEEKQAdtmJQB8r/YW+CX2PN8kABGRgFEIABGYsADFkzIAIYtgARm7sr21ng8wAOlzRACCoAAf/2Q==" alt=""></td>
-                        <td>XII RPL 2</td>
-                        <td>Soni Sudrajat</td>
-                        <td>12322223</td>
-                        <td>
-                            <div class="btn-group">
-                                <a class="btn btn-success" href="">Detail</a>
-                                <a class="btn btn-warning" href="">Edit</a>
-                                <a class="btn btn-danger" href="">Delete</a>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach ($users as $user)
+                        <tr>
+                            <th scope="row">1</th>
+                            <td><img width="50" src="{{ asset('storage/'.$user->photo) }}" alt=""></td>
+                            <td>{{ $user->clas->name }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->nisn }}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <a class="btn btn-success" href="">Detail</a>
+                                    <a class="btn btn-warning" href="">Edit</a>
+                                    <a class="btn btn-danger" href="">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

@@ -23,9 +23,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
+                    @foreach ($users as $index => $user)
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{ $index + 1 }}</th>
                             <td><img width="50" src="{{ asset('storage/'.$user->photo) }}" alt=""></td>
                             <td>{{ $user->clas->name }}</td>
                             <td>{{ $user->name }}</td>
@@ -34,7 +34,7 @@
                                 <div class="btn-group">
                                     <a class="btn btn-success" href="">Detail</a>
                                     <a class="btn btn-warning" href="">Edit</a>
-                                    <a class="btn btn-danger" href="">Delete</a>
+                                    <a class="btn btn-danger" href="/delete/{{ $user->id }}">Delete</a>
                                 </div>
                             </td>
                         </tr>

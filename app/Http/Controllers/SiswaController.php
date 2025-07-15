@@ -50,4 +50,11 @@ class SiswaController extends Controller
         User::create($data_store);
         return redirect('/');
     }
+
+
+    // delete siswa
+    public function destroy($id) {
+        User::find($id)->delete();
+        return redirect('/');
+    }
 }

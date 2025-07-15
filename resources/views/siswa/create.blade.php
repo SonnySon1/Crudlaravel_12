@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-        <h1 class="mb-5">CRUD SEDERHANA SISWA</h1>
+        <h1 class="mb-5">TAMBAH SISWA</h1>
         <a href="/" class="btn btn-warning mb-3">Kembali</a>
         <div>
             <form action="/create/store" method="POST" enctype="multipart/form-data">

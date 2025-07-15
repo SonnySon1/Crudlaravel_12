@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-        <h1 class="mb-5">CRUD SEDERHANA SISWA</h1>
+        <h1 class="mb-5">LIST DATA SISWA</h1>
         <a href="/create" class="btn btn-primary">Create Siswa</a>
         <div>
             <table class="table table-striped">
@@ -33,7 +33,7 @@
                             <td>
                                 <div class="btn-group">
                                     <a class="btn btn-success" href="">Detail</a>
-                                    <a class="btn btn-warning" href="">Edit</a>
+                                    <a class="btn btn-warning" href="/edit/{{ $user->id }}">Edit</a>
                                     <a class="btn btn-danger" href="/delete/{{ $user->id }}">Delete</a>
                                 </div>
                             </td>
